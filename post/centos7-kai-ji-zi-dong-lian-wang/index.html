@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Gridea</title>
+<title>centos7 开机自动连网 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,14 +92,37 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">centos7 开机自动连网</h2>
+            <div class="post-date">2019-08-20</div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <h4 id="centos7-开机自动连网">centos7 开机自动连网</h4>
+<pre><code>1.首先打开终端，用ifconfig查看网络
+
+2.进入 /etc/sysconfig/network-scripts/目录
+cd /etc/sysconfig/network-scripts/
+
+
+3.找到ifcfg文件，这个文件名可以在前面的ifconfig中查看。
+我这里的是 ifcfg-ens33
+
+4.打开 ifcfg-ens330 文件
+vim ifcfg-ens33
+5.输入a.i.o.r,进入插入模式,最后一行找到ONBOOT=no改为yes
+6.esc退出输入模式，：wq 保存退出，：q！不保存退出，：q退出
+</code></pre>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jishengchuan.github.io/post/hello-gridea">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
             
 
             
