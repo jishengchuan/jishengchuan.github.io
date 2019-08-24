@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Gridea</title>
+<title>2.Centos7中运行java程序 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,12 +91,48 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">2.Centos7中运行java程序</h2>
+            <div class="post-date">2019-08-20</div>
             
-              <a class="tag" href="https://jishengchuan.github.io/tag/6LivjT9NE">Gridea</a>
+            <div class="post-content">
+              <h4 id="1安装java运行环境">1.安装java运行环境</h4>
+<pre><code class="language-java">yum install java-1.8.0-openjdk-devel
+</code></pre>
+<h4 id="2在文件夹下如demo建文件">2.在文件夹下如demo建文件</h4>
+<pre><code class="language-java">vim HelloWorld.java
+输入a,i,o,r进入插入模式
+public class HelloWorld{
+	public static void main(String[] args){
+		System.out.println(&quot;HelloWorld!&quot;);
+	}
+}
+esc退出插入模式
+:wq保存退出 :q!不保存退出 :q!退出
+</code></pre>
+<h4 id="3编译执行java代码">3.编译执行java代码</h4>
+<pre><code class="language-java">javac HelloWorld.java 
+java HelloWorld
+Hello World!
+</code></pre>
+
+            </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jishengchuan.github.io/post/centos7-chang-yong-cao-zuo">
+                  <h3 class="post-title">
+                    1.Centos7 常用操作
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
           </div>
+
         </div>
       </div>
     </div>

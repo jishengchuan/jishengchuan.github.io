@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Gridea</title>
+<title>5.Centos7 安装数据库Mariadb | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,12 +91,41 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">5.Centos7 安装数据库Mariadb</h2>
+            <div class="post-date">2019-08-24</div>
             
-              <a class="tag" href="https://jishengchuan.github.io/tag/6LivjT9NE">Gridea</a>
+            <div class="post-content">
+              <h4 id="安装mariadb">安装MariaDb</h4>
+<pre><code class="language-mysql">安装：
+	yum install mariadb-server
+启动：
+	systemctl start mariadb
+设置开机自启:	
+	systemctl enable mariadb
+设置root密码：
+	mysqladmin -u root password '123456'
+使用root登录：
+	mysql -uroot -p123456
+</code></pre>
+
+            </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jishengchuan.github.io/post/4centos7-an-zhuang-tomcat">
+                  <h3 class="post-title">
+                    4.Centos7 安装Tomcat
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
           </div>
+
         </div>
       </div>
     </div>

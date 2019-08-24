@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Gridea</title>
+<title>1.Centos7 常用操作 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,12 +91,50 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">1.Centos7 常用操作</h2>
+            <div class="post-date">2019-08-20</div>
             
-              <a class="tag" href="https://jishengchuan.github.io/tag/6LivjT9NE">Gridea</a>
+            <div class="post-content">
+              <h4 id="下载centos7操作系统如何用u盘下载单个超过4g的文件夹">下载Centos7操作系统，如何用U盘下载单个超过4G的文件夹</h4>
+<p>​	格式化U盘，将文件系统设为<strong>NTFS</strong>，默认为<em>FAT32</em></p>
+<h4 id="1将tree的内容输入到alog">1.将tree的内容输入到a.log</h4>
+<p>tree &gt;&gt; demo/a/a.log<br>
+<img src="https://jishengchuan.github.io/post-images/1566301611524.png" alt=""></p>
+<h4 id="2移动alog到b目录下并改名为blog">2.移动a.log到b目录下并改名为b.log</h4>
+<p>mv ../a.log b.log</p>
+<h4 id="3复制etcsshsshd_config到当前文件">3.复制/etc/ssh/sshd_config到当前文件</h4>
+<p>cp /etc/ssh/sshd_config .</p>
+<h4 id="4复制b目录下blog到a并改名为alog">4.复制b目录下b.log到a并改名为a.log</h4>
+<p>cp a/b/b.log a/a.log</p>
+<h4 id="目录">目录</h4>
+<p>[root@localhost demo]# tree<br>
+.<br>
+├── a<br>
+│   ├── a.log<br>
+│   └── b<br>
+│       ├── b.log<br>
+│       └── c<br>
+└── sshd_config<br>
+<img src="https://jishengchuan.github.io/post-images/1566301825547.png" alt=""></p>
+
+            </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jishengchuan.github.io/post/centos7-kai-ji-zi-dong-lian-wang">
+                  <h3 class="post-title">
+                    3.Centos7 开机自动连网
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
           </div>
+
         </div>
       </div>
     </div>

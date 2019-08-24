@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jishengchuan.github.io</id>
     <title>Gridea</title>
-    <updated>2019-08-20T01:22:27.229Z</updated>
+    <updated>2019-08-24T15:26:33.340Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jishengchuan.github.io"/>
     <link rel="self" href="https://jishengchuan.github.io/atom.xml"/>
@@ -11,7 +11,126 @@
     <icon>https://jishengchuan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[centos7 开机自动连网]]></title>
+        <title type="html"><![CDATA[5.Centos7 安装数据库Mariadb]]></title>
+        <id>https://jishengchuan.github.io/post/5centos7-an-zhuang-shu-ju-ku-mariadb</id>
+        <link href="https://jishengchuan.github.io/post/5centos7-an-zhuang-shu-ju-ku-mariadb">
+        </link>
+        <updated>2019-08-24T15:12:55.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="安装mariadb">安装MariaDb</h4>
+<pre><code class="language-mysql">安装：
+	yum install mariadb-server
+启动：
+	systemctl start mariadb
+设置开机自启:	
+	systemctl enable mariadb
+设置root密码：
+	mysqladmin -u root password '123456'
+使用root登录：
+	mysql -uroot -p123456
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[4.Centos7 安装Tomcat]]></title>
+        <id>https://jishengchuan.github.io/post/4centos7-an-zhuang-tomcat</id>
+        <link href="https://jishengchuan.github.io/post/4centos7-an-zhuang-tomcat">
+        </link>
+        <updated>2019-08-24T15:12:15.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="安装tomcat">安装Tomcat</h4>
+<pre><code>[root@localhost local]# wget http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz
+
+解压
+
+tar -zxvf apache-tomcat-8.5.43.tar.gz
+
+然后启动bin目录下startup.sh
+
+./startup.sh
+
+停止
+
+./shutdown.sh
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[通过GitHub使用Gride]]></title>
+        <id>https://jishengchuan.github.io/post/tong-guo-github-shi-yong-gride</id>
+        <link href="https://jishengchuan.github.io/post/tong-guo-github-shi-yong-gride">
+        </link>
+        <updated>2019-08-24T15:10:33.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="通过github使用gride">通过GitHub使用Gride</h3>
+<h4 id="1在github上创建一个新库">1.在GitHub上创建一个新库</h4>
+<p>1).Respository name中填写XXX.github.io,以后就可以直接使用XXX.github.io访问</p>
+<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566658869601.png" alt="Respository name"></p>
+<h4 id="2创建token">2.创建token</h4>
+<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566659092607.png" alt="setting"><br>
+1).Generate new token</p>
+<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566659121834.png" alt="token"><br>
+2.)Edit personal access token</p>
+<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566659163995.png" alt="token设置"></p>
+<h4 id="3配置gridea">3.配置Gridea</h4>
+<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566658598502.png" alt="Gridea"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2.Centos7中运行java程序]]></title>
+        <id>https://jishengchuan.github.io/post/centos7-zhong-yun-xing-java-cheng-xu</id>
+        <link href="https://jishengchuan.github.io/post/centos7-zhong-yun-xing-java-cheng-xu">
+        </link>
+        <updated>2019-08-20T11:51:45.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="1安装java运行环境">1.安装java运行环境</h4>
+<pre><code class="language-java">yum install java-1.8.0-openjdk-devel
+</code></pre>
+<h4 id="2在文件夹下如demo建文件">2.在文件夹下如demo建文件</h4>
+<pre><code class="language-java">vim HelloWorld.java
+输入a,i,o,r进入插入模式
+public class HelloWorld{
+	public static void main(String[] args){
+		System.out.println(&quot;HelloWorld!&quot;);
+	}
+}
+esc退出插入模式
+:wq保存退出 :q!不保存退出 :q!退出
+</code></pre>
+<h4 id="3编译执行java代码">3.编译执行java代码</h4>
+<pre><code class="language-java">javac HelloWorld.java 
+java HelloWorld
+Hello World!
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1.Centos7 常用操作]]></title>
+        <id>https://jishengchuan.github.io/post/centos7-chang-yong-cao-zuo</id>
+        <link href="https://jishengchuan.github.io/post/centos7-chang-yong-cao-zuo">
+        </link>
+        <updated>2019-08-20T11:40:33.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="下载centos7操作系统如何用u盘下载单个超过4g的文件夹">下载Centos7操作系统，如何用U盘下载单个超过4G的文件夹</h4>
+<p>​	格式化U盘，将文件系统设为<strong>NTFS</strong>，默认为<em>FAT32</em></p>
+<h4 id="1将tree的内容输入到alog">1.将tree的内容输入到a.log</h4>
+<p>tree &gt;&gt; demo/a/a.log<br>
+<img src="https://jishengchuan.github.io/post-images/1566301611524.png" alt=""></p>
+<h4 id="2移动alog到b目录下并改名为blog">2.移动a.log到b目录下并改名为b.log</h4>
+<p>mv ../a.log b.log</p>
+<h4 id="3复制etcsshsshd_config到当前文件">3.复制/etc/ssh/sshd_config到当前文件</h4>
+<p>cp /etc/ssh/sshd_config .</p>
+<h4 id="4复制b目录下blog到a并改名为alog">4.复制b目录下b.log到a并改名为a.log</h4>
+<p>cp a/b/b.log a/a.log</p>
+<h4 id="目录">目录</h4>
+<p>[root@localhost demo]# tree<br>
+.<br>
+├── a<br>
+│   ├── a.log<br>
+│   └── b<br>
+│       ├── b.log<br>
+│       └── c<br>
+└── sshd_config<br>
+<img src="https://jishengchuan.github.io/post-images/1566301825547.png" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[3.Centos7 开机自动连网]]></title>
         <id>https://jishengchuan.github.io/post/centos7-kai-ji-zi-dong-lian-wang</id>
         <link href="https://jishengchuan.github.io/post/centos7-kai-ji-zi-dong-lian-wang">
         </link>
