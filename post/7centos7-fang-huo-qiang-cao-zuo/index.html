@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>4.Centos7 安装Tomcat | Gridea</title>
+<title>7.Centos7 防火墙操作 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,24 +92,53 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">4.Centos7 安装Tomcat</h2>
+            <h2 class="post-title">7.Centos7 防火墙操作</h2>
             <div class="post-date">2019-08-24</div>
             
             <div class="post-content">
-              <h4 id="安装tomcat">安装Tomcat</h4>
-<pre><code>[root@localhost local]# wget http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz
+              <h4 id="防火墙操作">防火墙操作</h4>
+<pre><code>CentOS7的防火墙换成了firewall了，这里做一些记录，下面是一些命令：
+添加例外端口：
+# firewall-cmd --add-port=8080/tcp
+删除例外端口：
+# firewall-cmd --remove-port=8080/tcp
+查看例外端口：
+# firewall-cmd --query-port=8080/tcp
 
-解压
 
-tar -zxvf apache-tomcat-8.5.43.tar.gz
+如果想永久添加，加上permanent参数，如：
+# firewall-cmd --permanent --add-port=8080/tcp
 
-然后启动bin目录下startup.sh
 
-./startup.sh
+另外想设置端口范围的可以这样使用：
+# firewall-cmd --add-port=80-8080/tcp
 
-停止
 
-./shutdown.sh
+
+ 查看防火墙状态
+
+firewall-cmd --state
+
+systemctl status firewalld.service
+
+
+关闭防火墙
+
+systemctl stop firewalld.service
+
+
+
+开启防火墙
+
+systemctl start firewalld.service
+
+
+设置开机启动启动防火墙
+systemctl enable firewalld.service
+
+禁止开机启动启动防火墙
+
+systemctl disable firewalld.service
 </code></pre>
 
             </div>
@@ -117,9 +146,9 @@ tar -zxvf apache-tomcat-8.5.43.tar.gz
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://jishengchuan.github.io/post/tong-guo-github-shi-yong-gride">
+                <a href="https://jishengchuan.github.io/post/5centos7-an-zhuang-shu-ju-ku-mariadb">
                   <h3 class="post-title">
-                    通过GitHub使用Gride
+                    5.Centos7 安装数据库Mariadb
                   </h3>
                 </a>
               </div>

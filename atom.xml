@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jishengchuan.github.io</id>
     <title>Gridea</title>
-    <updated>2019-08-24T15:27:25.842Z</updated>
+    <updated>2019-08-24T15:36:51.989Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jishengchuan.github.io"/>
     <link rel="self" href="https://jishengchuan.github.io/atom.xml"/>
@@ -10,6 +10,58 @@
     <logo>https://jishengchuan.github.io/images/avatar.png</logo>
     <icon>https://jishengchuan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[7.Centos7 防火墙操作]]></title>
+        <id>https://jishengchuan.github.io/post/7centos7-fang-huo-qiang-cao-zuo</id>
+        <link href="https://jishengchuan.github.io/post/7centos7-fang-huo-qiang-cao-zuo">
+        </link>
+        <updated>2019-08-24T15:26:34.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="防火墙操作">防火墙操作</h4>
+<pre><code>CentOS7的防火墙换成了firewall了，这里做一些记录，下面是一些命令：
+添加例外端口：
+# firewall-cmd --add-port=8080/tcp
+删除例外端口：
+# firewall-cmd --remove-port=8080/tcp
+查看例外端口：
+# firewall-cmd --query-port=8080/tcp
+
+
+如果想永久添加，加上permanent参数，如：
+# firewall-cmd --permanent --add-port=8080/tcp
+
+
+另外想设置端口范围的可以这样使用：
+# firewall-cmd --add-port=80-8080/tcp
+
+
+
+ 查看防火墙状态
+
+firewall-cmd --state
+
+systemctl status firewalld.service
+
+
+关闭防火墙
+
+systemctl stop firewalld.service
+
+
+
+开启防火墙
+
+systemctl start firewalld.service
+
+
+设置开机启动启动防火墙
+systemctl enable firewalld.service
+
+禁止开机启动启动防火墙
+
+systemctl disable firewalld.service
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[5.Centos7 安装数据库Mariadb]]></title>
         <id>https://jishengchuan.github.io/post/5centos7-an-zhuang-shu-ju-ku-mariadb</id>
@@ -61,16 +113,16 @@ tar -zxvf apache-tomcat-8.5.43.tar.gz
         <updated>2019-08-24T15:10:33.000Z</updated>
         <content type="html"><![CDATA[<h3 id="通过github使用gride">通过GitHub使用Gride</h3>
 <h4 id="1在github上创建一个新库">1.在GitHub上创建一个新库</h4>
-<p>1).Respository name中填写XXX.github.io,以后就可以直接使用XXX.github.io访问</p>
-<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566658869601.png" alt="Respository name"></p>
+<p>1).Respository name中填写XXX.github.io,以后就可以直接使用XXX.github.io访问<br>
+<img src="https://jishengchuan.github.io/post-images/1566660862139.png" alt="Respository name"></p>
 <h4 id="2创建token">2.创建token</h4>
-<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566659092607.png" alt="setting"><br>
-1).Generate new token</p>
-<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566659121834.png" alt="token"><br>
+<p><img src="https://jishengchuan.github.io/post-images/1566660826069.png" alt="setting"><br>
+1).Generate new token<br>
+<img src="https://jishengchuan.github.io/post-images/1566660882801.png" alt="token"><br>
 2.)Edit personal access token</p>
-<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566659163995.png" alt="token设置"></p>
+<p><img src="file://C:/Users/JSC/Documents/Gridea/postimages/1566660904795.png" alt="token设置"></p>
 <h4 id="3配置gridea">3.配置Gridea</h4>
-<p><img src="C:%5CUsers%5CJSC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566658598502.png" alt="Gridea"></p>
+<p><img src="https://jishengchuan.github.io/post-images/1566660928072.png" alt="Gridea"></p>
 ]]></content>
     </entry>
     <entry>
@@ -110,7 +162,7 @@ Hello World!
 <p>​	格式化U盘，将文件系统设为<strong>NTFS</strong>，默认为<em>FAT32</em></p>
 <h4 id="1将tree的内容输入到alog">1.将tree的内容输入到a.log</h4>
 <p>tree &gt;&gt; demo/a/a.log<br>
-<img src="https://jishengchuan.github.io/post-images/1566301611524.png" alt=""></p>
+<img src="https://jishengchuan.github.io/post-images/1566660992161.png" alt=""></p>
 <h4 id="2移动alog到b目录下并改名为blog">2.移动a.log到b目录下并改名为b.log</h4>
 <p>mv ../a.log b.log</p>
 <h4 id="3复制etcsshsshd_config到当前文件">3.复制/etc/ssh/sshd_config到当前文件</h4>
